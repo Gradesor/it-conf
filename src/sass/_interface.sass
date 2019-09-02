@@ -18,5 +18,22 @@ h1,h2,h3,p
 	&-footer
 		height: auto
 		min-height: auto
+	&:nth-child(1)
+		background-image: url('../img/bg.jpg')
+		background-size: cover
+		background-repeat: no-repeat
+		background-position: center
+		& div[class="slide__item"]
+			vertical-align: inherit
 body
 	+bold
+.wrap
+	max-width: 1300px
+	width: 100%
+	margin: 0 auto
+.bold
+	+bold
+@media (min-width: 992px)
+	.nav__link:hover
+		transition: 0.3s
+		color: darken(#fff, 30%)

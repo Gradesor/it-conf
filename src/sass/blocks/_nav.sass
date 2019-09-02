@@ -1,0 +1,34 @@
+.nav		
+	&__block
+		padding-top: 22px
+		padding-left: 40px
+		padding-right: 34px		
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__img
+		width: 156px
+	&__link
+		+bold
+		color: #fff
+		font-size: 20px
+		line-height: 30px
+		text-decoration: none
+	&__text
+		+reg
+		font-size: 16px
+@media (max-width: 800px)
+	.nav
+		&__link
+			font-size: 18px
+		&__text
+			font-size: 14px
+@media (max-width: 576px) and (min-width: 320px)
+	.nav
+		&__block
+			justify-content: center
+		&__link
+			display: none
+
+
+
