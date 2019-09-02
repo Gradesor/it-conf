@@ -11,20 +11,23 @@ h1,h2,h3,p
 	display: table
 	table-layout: fixed
 	width: 100%
+	background-image: url('../img/bg.jpg')
+	background-size: cover
+	background-repeat: no-repeat
+	background-position: center
 	&__item
 		display: table-cell
-		vertical-align: middle 
+		vertical-align: inherit 
 		width: 100%
 	&-footer
 		height: auto
-		min-height: auto
-	&:nth-child(1)
-		background-image: url('../img/bg.jpg')
-		background-size: cover
-		background-repeat: no-repeat
-		background-position: center
+		min-height: auto		
+header
+	color: #3b0f61
+	& div[class="slide"]
+		background-image: none
 		& div[class="slide__item"]
-			vertical-align: inherit
+			vertical-align: middle
 body
 	+bold
 .wrap
@@ -33,7 +36,35 @@ body
 	margin: 0 auto
 .bold
 	+bold
+.blue
+	color: #74bcff
+.container
+	max-width: 1300px
+	width: 100%
+	padding-left: 168px
+	padding-right: 10px
+.title
+	font-size: 30px
+	text-transform: uppercase
+@media (max-width: 1200px)
+	.container
+		padding-right: 30px
 @media (min-width: 992px)
 	.nav__link:hover
 		transition: 0.3s
 		color: darken(#fff, 30%)
+	.preview__btn:hover
+		transition: 0.3s
+		border: 1.5px solid #74bcff
+		background-color: #fff
+		color: #74bcff
+
+@media (max-width: 800px)
+	.container
+		padding-left: 52px
+@media (max-width: 576px) and (min-width: 320px)
+	.container
+		padding-left: 22px
+		padding-right: 21px
+	.title
+		font-size: 24px
