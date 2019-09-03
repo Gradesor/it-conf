@@ -1,15 +1,26 @@
 .preview
-	margin-top: 100px
+	margin-top: 45px
 	color: #fff
 	&__block
 		margin: 0 auto
 		display: flex		
 		flex-direction: column
 		padding-left: 168px
+		position: relative
+		&:after
+			position: absolute
+			content: ''
+			height: 70px
+			bottom: 0
+			left: 0
+			background-image: url('../img/square-1.png')
+			background-repeat: no-repeat
+			background-position: 165px
+			width: 100%
 	&__date
 		font-size: 18px
 		margin-bottom: 57px
-		margin-bottom: 55px
+		margin-bottom: 25px
 		+openS
 		&Aft
 			display: none
@@ -17,7 +28,7 @@
 		display: flex
 		justify-content: flex-start
 		align-items: center
-		margin-bottom: 65px
+		margin-bottom: 30px
 		&__figure
 			display: flex
 			justify-content: flex-start
@@ -68,24 +79,18 @@
 		+reg
 		font-size: 18px
 		text-decoration: none
-		color: #fff
-		text-transform: uppercase
-		background: #74bcff
-		border-radius: 3px
+		color: #fff		
 		width: 257px
-		height: 57px
-		display: flex
-		justify-content: center
-		align-items: center
-		margin-bottom: 50px
+		height: 57px		
+		margin-bottom: 30px
 	&__descr
 		font-size: 18px
 		line-height: 27px
 		+reg
-		margin-bottom: 72px
+		margin-bottom: 130px
 @media (max-width: 800px)
 	.preview
-		margin-top: 50px
+		margin-top: 50px				
 		&__date
 			display: none
 			&Aft
@@ -95,6 +100,8 @@
 			flex-direction: column
 			align-items: center
 			padding-left: 0
+			&:after
+				background-position: 0
 		&-info
 			flex-direction: column			
 			margin-bottom: 40px
@@ -107,13 +114,15 @@
 			margin-bottom: 30px
 		&__descr
 			text-align: center
-			margin-bottom: 35px
+			margin-bottom: 106px
 @media (max-width: 576px) and (min-width: 320px)
 	.preview
 		margin-top: 30px
 		display: flex
 		align-items: center
 		height: 80%
+		&__block:after
+			display: none
 		&-info
 			margin-bottom: 20px
 			&__figure

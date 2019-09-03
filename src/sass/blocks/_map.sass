@@ -1,0 +1,38 @@
+.map
+	width: 100%
+	height: 85vh
+	position: relative
+	& iframe
+		width: 100%
+		display: block
+		pointer-events: none
+		position: relative
+	& iframe.clicked
+		pointer-events: auto
+	&-block
+		background-image: url('../img/bg.jpg')
+		background-size: cover
+		background-position: center
+		width: 381px
+		height: 280px
+		position: absolute
+		left: 25px
+		top: 25%
+		z-index: 10
+		color: #fff
+		display: flex
+		justify-content: center
+		align-items: center
+		&__title
+			font-size: 36px
+			text-transform: uppercase			
+			margin-bottom: 36px
+		&__text
+			+reg
+			line-height: 27px
+			font-size: 18px
+@media (max-width: 950px)
+	.map
+
+
+

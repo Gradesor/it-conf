@@ -14,7 +14,7 @@ h1,h2,h3,p
 	background-image: url('../img/bg.jpg')
 	background-size: cover
 	background-repeat: no-repeat
-	background-position: center
+	background-position: center		
 	&__item
 		display: table-cell
 		vertical-align: inherit 
@@ -28,6 +28,11 @@ header
 		background-image: none
 		& div[class="slide__item"]
 			vertical-align: middle
+footer	
+	& div[class="slide"]
+		background-image: none
+		& div[class="slide__item"]
+			vertical-align: inherit
 body
 	+bold
 .wrap
@@ -46,6 +51,23 @@ body
 .title
 	font-size: 30px
 	text-transform: uppercase
+.btn
+	text-transform: uppercase
+	background: #74bcff
+	border-radius: 3px
+	display: flex
+	justify-content: center
+	align-items: center 
+@mixin input-placeholder
+  &.placeholder 		
+		&:-moz-placeholder
+			@content
+		&::-moz-placeholder
+			@content
+		&:-ms-input-placeholder
+			@content
+		&::-webkit-input-placeholder
+			@content
 @media (max-width: 1200px)
 	.container
 		padding-right: 30px
@@ -53,12 +75,14 @@ body
 	.nav__link:hover
 		transition: 0.3s
 		color: darken(#fff, 30%)
-	.preview__btn:hover
+	.btn:hover
 		transition: 0.3s
 		border: 1.5px solid #74bcff
 		background-color: #fff
 		color: #74bcff
-
+	.registr-form__link:hover
+		transition: 0.3s
+		color: darken(#74bcff, 20%) 
 @media (max-width: 800px)
 	.container
 		padding-left: 52px
@@ -68,3 +92,18 @@ body
 		padding-right: 21px
 	.title
 		font-size: 24px
+	.slide
+		&:after
+			position: absolute
+			content: ''
+			height: 70px
+			bottom: 0
+			left: 0
+			background-image: url('../img/square-1.png')
+			background-repeat: no-repeat
+			background-position: 0
+			width: 100%
+	header
+		& div[class="slide"]:after
+			display: none
+			
